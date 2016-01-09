@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Respin - Terminal OS Installer
+Name[uk]=Respin - Термінальний встановлювач ОС
+GenericName=System Installer
+Exec=sudo respin-installer
+Icon=system-run
+Terminal=true
+Type=Application
+Categories=System;Settings;
+GenericName[en_CA]=System Installer
