@@ -47,21 +47,20 @@ fi
 
 
 if [ "$SKELUSER" = "" ]; then
-    echo "Usage is: $0 [username]"
-    echo "Where [username] is a valid user on the system."
-    echo "Example: $0 john"
-    echo 
     echo "If no username provided or username is not correct we'll use the username with ID=1000..."
     echo 
     SKELUSER=`grep '^[^:]*:[^:]*:1000:' /etc/passwd | awk -F ":" '{ print $1 }'`
-    if [ "$SKELUSER"=""  ]; then
-	echo "OOOPS!!!! Your system doesn't have the user with ID=1000... It's strange..."
-	echo
-	echo "Due to absence of ID=1000 you should provide correct username as shown below."
+    if [ "$SKELUSER" = ""  ]; then
+        echo "OOOPS!!!! Your system doesn't have the user with ID=1000... It's strange..."
+        echo
+        echo "Due to absence of ID=1000 you should provide correct username as shown below."
+        echo
         echo "Usage is: $0 [username]"
-	echo "Where [username] is a valid user on the system."
-	echo
-	echo "Exiting..."
+        echo "Where [username] is a valid user on the system."
+        echo
+        echo "Example: $0 john"
+        echo
+        echo "Exiting..."
 	exit 1
     fi
     echo "So, the user profile we'll use is [$SKELUSER]..."
