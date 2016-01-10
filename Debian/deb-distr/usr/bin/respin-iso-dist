@@ -91,7 +91,7 @@ echo respin-skelcopy $SKELUSER
 
 
 # copy Installer to skel Desktop
-if [ ! -d "$WORKDIR/dummysys/etc/skel/Desktop/"]; then
+if [ ! -d "$WORKDIR/dummysys/etc/skel/Desktop/" ]; then
     mkdir $WORKDIR/dummysys/etc/skel/Desktop/
 fi
 cp /usr/share/applications/respin-installer*.desktop $WORKDIR/dummysys/etc/skel/Desktop/
